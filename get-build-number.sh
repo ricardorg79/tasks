@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 MAJOR_MINOR=$1
 if [ "$MAJOR_MINOR" = "" ]; then
     echo "Usage: $0 <version>"
@@ -22,16 +24,8 @@ if [ "$exist" = "0" ]; then
 fi
 
 if [ "$BUILDNO" = "" ]; then
-    BUILDNO="-1" # so it starts at 0 when incremented
+    BUILDNO="0" # so it starts at 0 when incremented
 fi
 
 # Increment
-BUILDNO=$((BUILDNO+1))
-
-# Save back into database
-NEWHASH=$(echo "$BUILDNO" | git hash-object -w --stdin)
-git update-ref $DATATAG $NEWHASH
-git push origin :$DATATAG
-git push origin --tags
-
-echo "$MAJOR_MINOR.$BUILDNO"
+echo $BUILDNO
