@@ -1,6 +1,12 @@
 #!/bin/bash
 
-MAJOR_MINOR="4.0"
+MAJOR_MINOR=$1
+if [ "$MAJOR_MINOR" = "" ]; then
+    echo "Usage: $0 <version>"
+    echo "  e.g: $0 1.2"
+    echo ""
+    exit 1
+fi
 DATATAG="refs/tags/data/v$MAJOR_MINOR"
 LOCALTAG="data/v$MAJOR_MINOR"
 

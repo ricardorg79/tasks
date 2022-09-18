@@ -1,5 +1,17 @@
-
+//
 deps = [
-    "github.com/bazurto/groovy-v4.0.4"
+        "github.com/bazurto/groovy@4.*",
 ]
+
+alias = {
+    "build": "$GROOVY_BINDIR/groovy $DIR/src/build.groovy $DIR/src/build.groovy AAAAA BBBBB CCCCC",
+    "pack": "$GROOVY_BINDIR/groovy $DIR/src/pack.groovy $DIR/src/build.groovy AAAAA BBBBB CCCCC",
+}
+
+
+/*
+run = [
+    "$GROOVY_BINDIR/groovy $DIR/src/proc.groovy",
+]
+*/
 

@@ -1,0 +1,14 @@
+{
+  "deps": [
+    {
+      "server": "github.com",
+      "owner": "bazurto",
+      "repo": "groovy",
+      "version": "4.0.4"
+    }
+  ],
+  "alias": {
+    "build": "$GROOVY_BINDIR/groovy $DIR/src/build.groovy $DIR/src/build.groovy AAAAA BBBBB CCCCC",
+    "pack": "$GROOVY_BINDIR/groovy $DIR/src/pack.groovy $DIR/src/build.groovy AAAAA BBBBB CCCCC"
+  }
+}
