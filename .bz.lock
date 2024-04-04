@@ -4,11 +4,22 @@
       "server": "github.com",
       "owner": "bazurto",
       "repo": "groovy",
-      "version": "4.0.4"
+      "version": "4.0.11"
+    },
+    {
+      "server": "github.com",
+      "owner": "bazurto",
+      "repo": "python",
+      "version": "3.11.1"
     }
   ],
+  "env": {
+    "CLASSPATH": "$DIR/src"
+  },
   "alias": {
-    "build": "$GROOVY_BINDIR/groovy $DIR/src/build.groovy $DIR/src/build.groovy AAAAA BBBBB CCCCC",
-    "pack": "$GROOVY_BINDIR/groovy $DIR/src/pack.groovy $DIR/src/build.groovy AAAAA BBBBB CCCCC"
+    "build": "$BAZURTO_PYTHON_BINDIR/python $DIR/src/main.py build",
+    "deploy": "$BAZURTO_PYTHON_BINDIR/python $DIR/src/main.py deploy",
+    "pack": "$BAZURTO_PYTHON_BINDIR/python $DIR/src/main.py pack",
+    "release": "$BAZURTO_PYTHON_BINDIR/python $DIR/src/main.py release"
   }
 }
