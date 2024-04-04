@@ -3,19 +3,21 @@
 //  CURDIR
 //  BINDIR : can be redefined
 deps = [
-        "github.com/bazurto/groovy@4.*",
         "github.com/bazurto/python@3.*",
 ]
 
+
 env = {
-    "CLASSPATH": "$DIR/src"
+    "TASKPROJECTDIR": "$BINDIR"
 }
 
+/*
 alias = {
     "build": "$BAZURTO_PYTHON_BINDIR/python $DIR/src/main.py build",
     "pack": "$BAZURTO_PYTHON_BINDIR/python $DIR/src/main.py pack",
     "release": "$BAZURTO_PYTHON_BINDIR/python $DIR/src/main.py release",
     "deploy": "$BAZURTO_PYTHON_BINDIR/python $DIR/src/main.py deploy",
 }
+*/
 
 
